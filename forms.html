@@ -12,7 +12,7 @@
             <li>Для атрибута action, воспользуйтесь значением "http://sc.it-academy.by/fe/form.php" - небольшой
                 скрипт показывающий переменные переданные методами post и get.</i></li>
         </ul>
-        <table width="700" border="1">
+        <table width="700px" border="0">
             <tr>
                 <td>
                     <h5>Простая форма поиска с вариантами:</h5>
@@ -112,7 +112,20 @@
             </tr>
             <tr>
                 <td>
-
+                    <h5>Отзыв:</h5>
+                    <fieldset>
+                        <legend>Оставить Ваш отзыв</legend>
+                        <form id="review" name="user_name, user_email, user_rev" method="post"
+                              action="http://fe.it-academy.by/TestForm.php">
+                            <input type="text" id="name" name="user_name" required>
+                            <label for="name">*Логин</label><br>
+                            <input type="email" id="email" name="user_email" required>
+                            <label for="email">*e-mail</label><br>
+                            <textarea id="review" name="user_rev" rows="2" cols="18">Форма отправки</textarea><br>
+                            <input type="submit" value="Отправить"><br>
+                            <i>* - обязательное поле<br>поле e-mail с проверкой<br>метод POST</i>
+                        </form>
+                    </fieldset>
                 </td>
                 <td>
 
