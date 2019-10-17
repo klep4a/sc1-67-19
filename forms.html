@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Forms</title>
+    </head>
+    <body>
+    <p><i>Рекомендации к выполнению работы:</i></p>
+        <ul>
+            <li><i>Все эти формы размещены в таблице, шириной 700px, 4 строки х 2 столбца</li>
+            <li>Каждая форма должна правильно заполненные атрибуты name, method и action.</li>
+            <li>Для атрибута action, воспользуйтесь значением "http://sc.it-academy.by/fe/form.php" - небольшой
+                скрипт показывающий переменные переданные методами post и get.</i></li>
+        </ul>
+        <table width="700" border="1">
+            <tr>
+                <td>
+                    <h5>Простая форма поиска с вариантами:</h5>
+                        <fieldset>
+                            <legend>Строка поиска</legend>
+                            <form id="search" name="user_input" method="get"
+                                  action="http://fe.it-academy.by/TestForm.php">
+                                <label for="search"></label>
+                                <input type="text" id="search" name="user_input" maxlength="10">
+                                <input type="submit" value="Искать"><br>
+                                <label>
+                                    <input type="radio" name="var_search"
+                                           value="on_site" id="var_search_on_site" checked> на сайте
+                                </label>
+                                <label>
+                                    <input type="radio" name="var_search"
+                                           value="on_googl" id="var_search_on_googl"> в google
+                                </label><br>
+                                <i>Длина запроса не более 10 символов</i>
+                            </form>
+                        </fieldset>
+                </td>
+                <td>
+                    <h5>Простая форма поиска с вариантами:</h5>
+                    <fieldset>
+                        <legend>Строка поиска</legend>
+                        <form id="search" name="user_input" method="post"
+                              action="http://fe.it-academy.by/TestForm.php">
+                            <input type="text" id="search" name="user_input"
+                                   autofocus placeholder="это обязательное поле" required>
+                            <label for="search">*</label>
+                            <input type="submit" value="Искать"><br>
+                            <label>
+                                <input type="radio" name="var_search"
+                                       value="on_site" id="var_search_on_site" checked> на сайте
+                            </label>
+                            <label>
+                                <input type="radio" name="var_search"
+                                       value="on_googl" id="var_search_on_googl"> в google
+                            </label><br>
+                            <i>* - обязательное поле<br>Автофокус в поле поиска</i>
+                        </form>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Простая форма авторизации:</h5>
+                    <fieldset>
+                        <legend>Авторизируйтесь</legend>
+                        <form id="auth" name="user_log, user_pass" method="post"
+                              action="http://fe.it-academy.by/TestForm.php">
+                            <input type="text" id="login" name="user_log"
+                                   placeholder="login" required>
+                            <label for="login">*Логин</label><br>
+                            <input type="password" id="password" name="user_pass"
+                                   placeholder="password" required>
+                            <label for="password">*Пароль</label><br>
+                            <label>
+                                <input type="checkbox" name="on_system"
+                                       value="on_system" id="auth"> Оставаться в системе
+                            </label><br>
+                            <input type="submit" value="Войти"><br>
+                            <i>* - обязательное поле</i>
+                        </form>
+                    </fieldset>
+                </td>
+                <td>
+                    <h5>Опрос(голосование):</h5>
+                    <fieldset>
+                        <legend>Как вам?</legend>
+                        <form id="poll" name="user_vote, user_date" method="post"
+                              action="http://fe.it-academy.by/TestForm.php">
+                        <label>
+                            <input type="radio" name="user_vote"
+                                   value="vote_2" checked> ничего
+                        </label><br>
+                        <label>
+                            <input type="radio" name="user_vote"
+                                   value="vote_3"> неплохо
+                        </label><br>
+                        <label>
+                            <input type="radio" name="user_vote"
+                                   value="vote_4"> хорошо
+                        </label><br>
+                        <label>
+                            <input type="radio" name="user_vote"
+                                   value="vote_5"> супер
+                        </label><br>
+                            <input type="hidden"  name='user_date' value="2013.12.31">
+                            <input type="submit" value="Отправить"><br>
+                        <i>Есть скрытое поле<br>
+                            name=user_date, value="2013.12.31"</i>
+                        </form>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
