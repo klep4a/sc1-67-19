@@ -147,6 +147,7 @@
                                     <option value="4">Москва</option>
                                     <option value="5">Рязань</option>
                                     <option value="6">Магадан</option>
+                                    <option value="6">Воркута</option>
                                 </optgroup>
                             </select>
                             <input type="submit" value="Ok">
@@ -159,12 +160,12 @@
                     <h5>Загрузка файла на сервер:</h5>
                     <fieldset>
                         <legend>Upload</legend>
-                        <form id="file" name="file" method="post" enctype="multipart/form-data"
+                        <form id="file" name="file, srok" method="post" enctype="multipart/form-data"
                               action="http://fe.it-academy.by/TestForm.php">
                             Файл:<br>
                             <input type="file" name="file" dir='ltr'><br>
                             Срок хранения (года):<br>
-                            <select name="file" id="srok">
+                            <select name="srok">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -177,18 +178,19 @@
                         </form>
                     </fieldset>
                 </td>
-                <td>
+                <td width="50%">
                     <h5>Валидация данных HTML5:</h5>
                     <fieldset>
                         <legend>Строка поиска</legend>
-                        <form id="file" name="text, tel" method="post"
+                        <form name="text, tel" method="post"
                               action="http://fe.it-academy.by/TestForm.php">
                             <input type="text" placeholder="Только русские буквы" name='text'
-                                   autocomplete="off"><br>
+                                   autocomplete="off" pattern="[А-Яа-я]"><br>
                             <i>Телефонный номер в формате<br>
                                 +ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i>
                             <input type="tel" placeholder="+375-29-1234567" name='tel'
-                                   autocomplete="off"><br>
+                                   autocomplete="off" pattern="^[+][0-9]{3}-[0-9]{2}-[0-9]{7}">
+                             required><br>
                             <input type="submit" value="Проверить">
                         </form>
                     </fieldset>
