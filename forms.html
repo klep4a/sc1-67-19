@@ -13,7 +13,7 @@
                 скрипт показывающий переменные переданные методами post и get.</i></li>
         </ul>
         <table width="700px" border="0">
-            <tr>
+            <tr valign="top">
                 <td>
                     <h5>Простая форма поиска с вариантами:</h5>
                         <fieldset>
@@ -58,7 +58,7 @@
                     </fieldset>
                 </td>
             </tr>
-            <tr>
+            <tr valign="top">
                 <td>
                     <h5>Простая форма авторизации:</h5>
                     <fieldset>
@@ -110,7 +110,7 @@
                     </fieldset>
                 </td>
             </tr>
-            <tr>
+            <tr valign="top">
                 <td>
                     <h5>Отзыв:</h5>
                     <fieldset>
@@ -118,7 +118,7 @@
                         <form id="review" name="user_name, user_email, user_rev" method="post"
                               action="http://fe.it-academy.by/TestForm.php">
                             <input type="text" id="name" name="user_name" required>
-                            <label for="name">*Логин</label><br>
+                            <label for="name">*Имя</label><br>
                             <input type="email" id="email" name="user_email" required>
                             <label for="email">*e-mail</label><br>
                             <textarea id="review" name="user_rev" rows="2" cols="18">Форма отправки</textarea><br>
@@ -128,15 +128,70 @@
                     </fieldset>
                 </td>
                 <td>
-
+                    <h5>Выпадающий и мульти списки:</h5>
+                    <fieldset>
+                        <legend>Города</legend>
+                        <form id="city" name="city_rb, city_rb_ru" method="get"
+                              action="http://fe.it-academy.by/TestForm.php">
+                            <select name="city_rb" id="city_rb">
+                                <option value="1">Минск</option>
+                                <option value="2">Брест</option>
+                            </select>
+                            <select name="city_rb_ru" id="city_rb_ru" size="8">
+                                <optgroup label="Города РБ">
+                                    <option value="1">Минск</option>
+                                    <option value="2">Брест</option>
+                                    <option value="3">Витебск</option>
+                                </optgroup>
+                                <optgroup label="Города России">
+                                    <option value="4">Москва</option>
+                                    <option value="5">Рязань</option>
+                                    <option value="6">Магадан</option>
+                                </optgroup>
+                            </select>
+                            <input type="submit" value="Ok">
+                        </form>
+                    </fieldset>
                 </td>
             </tr>
-            <tr>
+            <tr valign="top">
                 <td>
-
+                    <h5>Загрузка файла на сервер:</h5>
+                    <fieldset>
+                        <legend>Upload</legend>
+                        <form id="file" name="file" method="post" enctype="multipart/form-data"
+                              action="http://fe.it-academy.by/TestForm.php">
+                            Файл:<br>
+                            <input type="file" name="file" dir='ltr'><br>
+                            Срок хранения (года):<br>
+                            <select name="file" id="srok">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <input type="submit" value="загрузить"><br>
+                            <i>Метод POST<br>
+                            В теге form используйте атрибут<br>
+                            enctype="multipart/form-data"для отправки<br>
+                                файла на сервер</i>
+                        </form>
+                    </fieldset>
                 </td>
                 <td>
-
+                    <h5>Валидация данных HTML5:</h5>
+                    <fieldset>
+                        <legend>Строка поиска</legend>
+                        <form id="file" name="text, tel" method="post"
+                              action="http://fe.it-academy.by/TestForm.php">
+                            <input type="text" placeholder="Только русские буквы" name='text'
+                                   autocomplete="off"><br>
+                            <i>Телефонный номер в формате<br>
+                                +ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i>
+                            <input type="tel" placeholder="+375-29-1234567" name='tel'
+                                   autocomplete="off"><br>
+                            <input type="submit" value="Проверить">
+                        </form>
+                    </fieldset>
                 </td>
             </tr>
         </table>
