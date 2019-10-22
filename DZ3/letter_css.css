@@ -1,3 +1,15 @@
 header {
     text-align: right;
 }
+h1 {
+	font-size: 90%;
+}
+h3 {
+	font-family: 'Bad Script', cursive;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+article {
+	font-family: 'Bad Script', cursive;
+}
