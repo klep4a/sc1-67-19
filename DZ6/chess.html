@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chess</title>
+    <!--Домашнее задание - базовое #3
+    Добавьте стили, к пустой (внутри таблицы нет ни одного атрибута, только теги)
+     таблице, таким образом, чтобы она "стала" шахматной доской. Постарайтесь это
+      сделать как можно меньшим количеством селекторов (идеальный вариант 3 
+      селектора). Для закраски нужных ячеек воспользуйтесь комбинацией из 
+      псевдоклассов :nth-child(odd) и :nth-child(even) .
+    
+    Домашнее задание - дополнительное #2
+    После выполнения "Домашнее задание - базовое #3",
+     расставьте цифры в каждой ячейке шахматной доски с 
+     убыванием от 64 до 1, с использованием исключительно CSS*/-->
+    <style>
+        table {
+            width: 95vh;
+            height: 95vh;
+            border: black solid;
+            border-spacing: 0;
+            counter-reset: num 65;
+        }
+
+        tr:nth-child(odd) > td:nth-child(even),
+        tr:nth-child(even) > td:nth-child(odd) {
+            background-color: black;
+            color: white;
+        }
+
+        td::before {
+            counter-increment: num -1;
+            content: counter(num);
+            font-size: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
