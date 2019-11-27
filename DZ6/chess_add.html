@@ -13,7 +13,7 @@
       псевдоклассов :nth-child(odd) и :nth-child(even) .
     
     Домашнее задание - дополнительное #2
-    После выполнения "Домашнее задание - базовое #3",
+    После выполнения "Домашнее задание - базовое #3", /*--changed--*/
      расставьте цифры в каждой ячейке шахматной доски с 
      убыванием от 64 до 1, с использованием исключительно CSS*/-->
     <style>
@@ -22,7 +22,7 @@
             height: 95vh;
             border: black solid;
             border-spacing: 0;
-            counter-reset: num 65;
+            counter-reset: num 0;
         }
 
         tr:nth-child(odd) > td:nth-child(even),
@@ -32,12 +32,21 @@
         }
 
         td::before {
-            counter-increment: num -1;
+            counter-increment: num +1;
             content: counter(num);
             font-size: 8vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            
+        }
+        td:hover {
+            background-color: rebeccapurple;
+            
+            -webkit-transition: all 2s ease; /*--changed--*/
+            transition: all 2s ease;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
         }
         </style>
 </head>
